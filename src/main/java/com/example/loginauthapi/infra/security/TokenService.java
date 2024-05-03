@@ -34,7 +34,7 @@ public class TokenService {
 
   private Instant generateExpirationDate() {
     LocalDateTime now = LocalDateTime.now();
-    ZoneId zone = ZoneId.of("Europe/Portugal");
+    ZoneId zone = ZoneId.of("Europe/Paris");
     ZoneOffset zoneOffset = zone.getRules().getOffset(now);
     return now.plusHours(2).toInstant(zoneOffset);
   }
